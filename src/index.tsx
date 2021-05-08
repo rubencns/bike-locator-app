@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './global-styles/reset-styles.scss';
+import './global-styles/global.scss';
+import MapContextProvider from './context/map-context/map-context';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MapContextProvider>
+      <App />
+    </MapContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
