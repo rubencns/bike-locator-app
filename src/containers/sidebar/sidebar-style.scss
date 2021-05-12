@@ -1,3 +1,16 @@
+@mixin cross-line {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 15px;
+  width: 1px;
+  background: #000;
+}
+
 .sidebar {
   padding: 12px 24px 0;
   display: flex;
@@ -12,6 +25,69 @@
     &-logo {
       font-weight: 700;
       margin-bottom: 8px;
+    }
+
+    &-title {
+      margin-bottom: 8px;
+    }
+
+    &-search {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #000;
+      //padding-right: 8px;
+
+      input {
+        height: 100%;
+        width: 100%;
+        padding: 8px;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      &.focus {
+        border: 1px solid rgb(33, 33, 179);
+      }
+
+      &.icon-hidden {
+        .sidebar-header-search__icon {
+          display: none;
+        }
+      }
+
+      .sidebar-header-search__icon {
+        margin: 8px;
+        min-width: 15px;
+        min-height: 15px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          &::after {
+            background: #555;
+          }
+          &::before {
+            background: #555;
+          }
+        }
+
+        &::after {
+          @include cross-line();
+          transform: rotate(45deg);
+          transition: all 0.2s ease-in-out;
+        }
+
+        &::before {
+          @include cross-line();
+          transform: rotate(-45deg);
+          transition: all 0.2s ease-in-out;
+        }
+      }
     }
   }
 
@@ -59,6 +135,13 @@
         background: #fff;
         color: #000;
         border-color: 1px solid #000;
+      }
+
+      &.disabled {
+        cursor: default;
+        background: #ccc;
+        color: #fff;
+        border-color: #ccc;
       }
     }
   }

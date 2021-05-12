@@ -5,12 +5,14 @@ interface StationsProps {
   networkDetails: any;
   setNetworkStation: Dispatch<any>;
   getNetworkDetails: (id: string) => void;
+  clearSearchInput: () => void;
 }
 
 const Stations: React.FC<StationsProps> = ({
   networkDetails,
   setNetworkStation,
   getNetworkDetails,
+  clearSearchInput,
 }) => {
   const { id }: { id: string } = useParams();
   const [activeId, setActiveId] = useState<string>();
@@ -34,13 +36,14 @@ const Stations: React.FC<StationsProps> = ({
             onClick={() => {
               setActiveId(station.id);
               setNetworkStation({ ...station });
+              clearSearchInput();
             }}
           >
             <p>{station.name}</p>
           </li>
         ))
       ) : (
-        <p>No stations available.</p>
+        <p>No results…</p>
       )}
     </ul>
   );
