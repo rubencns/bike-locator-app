@@ -3,7 +3,6 @@ import { Icon } from 'leaflet';
 import BikeIcon from '../../assets/svg/bicycle-solid.svg';
 import 'leaflet/dist/leaflet.css';
 import './map-style.scss';
-import { useEffect } from 'react';
 import {
   hideDetails,
   useMapContext,
@@ -70,11 +69,6 @@ const Map: React.FC<MapProps> = ({
   const handleHideDetails = () => {
     dispatch(hideDetails(!state.hideDetails));
   };
-
-  useEffect(() => {
-    /* console.log(networkStation);
-    if (Object.keys(networkStation).length !== 0) setDetailsVisible(false); */
-  }, [networkStation]);
 
   return (
     <div className="map-wrapper">
