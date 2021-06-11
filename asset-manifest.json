@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.60b7f92a.chunk.css",
+    "main.js": "/static/js/main.48285645.chunk.js",
+    "main.js.map": "/static/js/main.48285645.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.3e4948d5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.3e4948d5.js.map",
+    "static/css/2.b4ebbe46.chunk.css": "/static/css/2.b4ebbe46.chunk.css",
+    "static/js/2.982520a9.chunk.js": "/static/js/2.982520a9.chunk.js",
+    "static/js/2.982520a9.chunk.js.map": "/static/js/2.982520a9.chunk.js.map",
+    "static/js/3.d186a80a.chunk.js": "/static/js/3.d186a80a.chunk.js",
+    "static/js/3.d186a80a.chunk.js.map": "/static/js/3.d186a80a.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.b4ebbe46.chunk.css.map": "/static/css/2.b4ebbe46.chunk.css.map",
+    "static/css/main.60b7f92a.chunk.css.map": "/static/css/main.60b7f92a.chunk.css.map",
+    "static/js/2.982520a9.chunk.js.LICENSE.txt": "/static/js/2.982520a9.chunk.js.LICENSE.txt",
+    "static/media/bicycle-solid.76ee6971.svg": "/static/media/bicycle-solid.76ee6971.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3e4948d5.js",
+    "static/css/2.b4ebbe46.chunk.css",
+    "static/js/2.982520a9.chunk.js",
+    "static/css/main.60b7f92a.chunk.css",
+    "static/js/main.48285645.chunk.js"
+  ]
+}
